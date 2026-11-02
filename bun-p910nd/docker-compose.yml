@@ -9,6 +9,135 @@ services:
   web:
     image: nginx:alpine
     restart: on-failure
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cat > /usr/share/nginx/html/index.html <<'HTML'
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#101126">
+          <title>p910nd | Network Printer</title>
+          <style>
+            * { box-sizing: border-box; }
+
+            body {
+              margin: 0;
+              min-height: 100vh;
+              padding: 24px;
+              display: grid;
+              place-items: center;
+              background:
+                radial-gradient(ellipse at 85% 10%, #31117b, transparent 38%),
+                #090b1b;
+              color: #f5f5ff;
+              font-family: Inter, system-ui, sans-serif;
+            }
+
+            main {
+              width: min(620px, 100%);
+              padding: 36px;
+              border: 1px solid #5140a8;
+              border-radius: 28px;
+              background: linear-gradient(145deg, #171a38, #101126);
+              box-shadow: 0 24px 80px #0008;
+            }
+
+            .brand {
+              display: flex;
+              align-items: center;
+              gap: 18px;
+            }
+
+            .brand img {
+              width: 76px;
+              height: 76px;
+            }
+
+            h1 {
+              margin: 0;
+              font-size: 2rem;
+            }
+
+            p {
+              color: #c4c6e2;
+              line-height: 1.65;
+            }
+
+            .status {
+              display: flex;
+              align-items: center;
+              gap: 9px;
+            }
+
+            .dot {
+              width: 9px;
+              height: 9px;
+              border-radius: 50%;
+              background: #55ef83;
+            }
+
+            .port {
+              display: inline-block;
+              padding: 10px 14px;
+              border-radius: 12px;
+              background: #241b55;
+              color: #dcd5ff;
+            }
+
+            small {
+              display: block;
+              margin-top: 28px;
+              color: #8588ad;
+              line-height: 1.5;
+            }
+          </style>
+        </head>
+
+        <body>
+          <main>
+            <div class="brand">
+              <img
+                src="https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bun-p910nd/icon.svg"
+                alt="p910nd icon"
+              >
+              <h1>p910nd</h1>
+            </div>
+
+            <p class="status">
+              <span class="dot"></span>
+              Network printer service
+            </p>
+
+            <p>
+              This app shares the USB printer connected to your
+              Umbrel over your local network.
+            </p>
+
+            <div class="port">
+              RAW / JetDirect TCP · Port 9100
+            </div>
+
+            <p>
+              To print, add a network printer on your computer
+              using your Umbrel device's IP address and port
+              <strong>9100</strong>.
+            </p>
+
+            <small>
+              This page is an information panel.
+              Printing traffic uses TCP port 9100,
+              not this web page.
+            </small>
+          </main>
+        </body>
+        </html>
+        HTML
+
+        exec nginx -g 'daemon off;'
 
   server:
     image: justinhimself/p910nd:latest
