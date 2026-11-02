@@ -7,7 +7,7 @@ Shares a USB-connected printer over the local network using p910nd.
 ## Ports
 
 - **TCP 9100** — RAW / JetDirect printing. Configure your client with the Umbrel host IP and port `9100`.
-- **TCP 8080** — app information page behind Umbrel's app proxy.
+- **TCP 2137** — app information page behind Umbrel's app proxy.
 
 ## Requirements
 
