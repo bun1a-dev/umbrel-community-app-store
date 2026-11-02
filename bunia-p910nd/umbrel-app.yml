@@ -1,25 +1,19 @@
 manifestVersion: 1
-
-id: bun1a-p910nd
-name: Network Printer
+id: bunia-p910nd
+name: p910nd
 tagline: Share a USB printer over your network
-
-icon: https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bun1a-p910nd/icon.svg
-
+icon: https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bunia-p910nd/icon.svg
 category: Utilities
 version: "1.0.0"
-port: 9100
-
+port: 8080
 description: >-
-  Lightweight network print server powered by p910nd.
-  Shares a USB printer over RAW TCP port 9100.
-
-developer: Bun1a
+  Share a USB-connected printer over your local network using the
+  JetDirect-compatible RAW TCP protocol on port 9100.
+developer: bun1a-dev
 website: https://github.com/bun1a-dev/umbrel-community-app-store
-submitter: Bun1a
+submitter: bun1a-dev
 repo: https://github.com/bun1a-dev/umbrel-community-app-store
 support: https://github.com/bun1a-dev/umbrel-community-app-store/issues
-
 releaseNotes: Initial release.
 dependencies: []
 path: ""
