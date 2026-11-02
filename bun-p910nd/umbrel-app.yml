@@ -5,7 +5,7 @@ tagline: Share a USB printer over your network
 icon: https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bun-p910nd/icon.svg
 category: Utilities
 version: "1.0.0"
-port: 8080
+port: 2137
 description: >-
   Share a USB-connected printer over your local network
   using the JetDirect-compatible RAW TCP protocol.
