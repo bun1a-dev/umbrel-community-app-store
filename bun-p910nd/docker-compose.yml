@@ -3,7 +3,7 @@ version: "3.7"
 services:
   server:
     image: justinhimself/p910nd:latest
-    container_name: bunia-p910nd_server_1
+    container_name: bun-p910nd_server_1
     restart: unless-stopped
     command:
       - "-b"
@@ -17,7 +17,7 @@ services:
 
   web:
     image: nginx:alpine
-    container_name: bunia-p910nd_web_1
+    container_name: bun-p910nd_web_1
     restart: unless-stopped
     volumes:
       - ./web:/usr/share/nginx/html:ro
@@ -27,8 +27,8 @@ services:
 
   app_proxy:
     image: getumbrel/app-proxy:1.0.0
-    container_name: bunia-p910nd_app_proxy_1
+    container_name: bun-p910nd_app_proxy_1
     restart: unless-stopped
     environment:
-      APP_HOST: bunia-p910nd_web_1
+      APP_HOST: bun-p910nd_web_1
       APP_PORT: 8080

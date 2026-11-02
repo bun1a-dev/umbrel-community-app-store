@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: bunia-p910nd
+id: bun-p910nd
 name: p910nd
 tagline: Share a USB printer over your network
-icon: https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bunia-p910nd/icon.svg
+icon: https://raw.githubusercontent.com/bun1a-dev/umbrel-community-app-store/master/bun-p910nd/icon.svg
 category: Utilities
 version: "1.0.0"
 port: 8080
