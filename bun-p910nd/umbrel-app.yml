@@ -7,8 +7,8 @@ category: Utilities
 version: "1.0.0"
 port: 8080
 description: >-
-  Share a USB-connected printer over your local network using the
-  JetDirect-compatible RAW TCP protocol on port 9100.
+  Share a USB-connected printer over your local network
+  using the JetDirect-compatible RAW TCP protocol.
 developer: bun1a-dev
 website: https://github.com/bun1a-dev/umbrel-community-app-store
 submitter: bun1a-dev
